@@ -1,5 +1,10 @@
 exports.up = async (knex) => {
   await knex.schema
+    .createTable("users", (users) => {
+      users.increments("user_id");
+      users.string("username", 128).notNullable().unique();
+      users.string("password", 128).notNullable();
+    })
     .createTable("nuclear", (table) => {
       table.increments("nuclear_id");
       table.text("nuclear_name").notNullable().unique();
@@ -18,17 +23,12 @@ exports.up = async (knex) => {
         .inTable("nuclear")
         .onDelete("RESTRICT")
         .onUpdate("RESTRICT");
-    })
-    .createTable("users", (users) => {
-      users.increments("user_id");
-      users.string("username", 128).notNullable().unique();
-      users.string("password", 128).notNullable();
     });
 };
 
 exports.down = async function (knex) {
   await knex.schema
-    .dropTableIfExists("users")
     .dropTableIfExists("people")
-    .dropTableIfExists("nuclear");
+    .dropTableIfExists("nuclear")
+    .dropTableIfExists("users");
 };

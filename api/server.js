@@ -8,7 +8,9 @@ server.use(helmet());
 server.use(cors());
 
 const authRouter = require("./auth/auth-router");
+const usersRouter = require("./users/users-router");
 server.use("/api/auth", authRouter);
+server.use("/api/users", usersRouter);
 
 server.use((err, req, res, next) => {
   res.status(err.status || 500).json({

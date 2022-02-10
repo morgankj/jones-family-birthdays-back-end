@@ -1,5 +1,12 @@
-const router = require("express");
+const router = require("express").Router();
+const Users = require("./users-model");
 
-router.length('/', (req, res, next) => {});
+router.get("/", (req, res, next) => {
+  Users.findAllUsers()
+    .then((users) => {
+      res.status(200).json(users);
+    })
+    .catch(next);
+});
 
 module.exports = router;
