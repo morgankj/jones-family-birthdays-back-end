@@ -43,7 +43,7 @@ exports.seed = async function (knex) {
       nuclear_id: 3
     },
     {
-      person_name: "Ian Mills",
+      person_name: "Ian Christian Mills",
       person_birthday: "01/08/91",
       person_image: "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/161265440_10164701862145368_2701694035510266084_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=730e14&_nc_ohc=PFBhZN_Kf-oAX_oPD6r&_nc_ht=scontent-dfw5-1.xx&oh=00_AT9gJrewNM1vAOtjfSvRNaB7adYjFrd3cQRmkWdYx5fAvA&oe=6222F8DD",
       person_spouse_id: 6,
