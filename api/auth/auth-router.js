@@ -26,7 +26,7 @@ router.post("/login", (req, res, next) => {
         const token = makeToken(user);
         res
           .status(200)
-          .json({ message: `Successfully logged in as ${username}`, token });
+          .json({ message: `Successfully logged in as ${username}`, user, token });
       } else {
         next({ status: 401, message: "Invalid credentials" });
       }

@@ -1,3 +1,25 @@
+This is the back-end database for the Jones Family Birthdays application, deployed on Heroku.
+Passwords are hashed and managed with JWT tokens.
+
+There are 3 tables that manage app data, organized like so:
+1. users
+  - user_id, username, password, email
+2. nuclear
+  - nuclear_id, nuclear_name
+3. people
+  - person_id, person_name, person_birthday, person_image, person_spouse_id(), nuclear_id(FK)
+
+Endpoints:
+
+[BackEnd Base URL] https://DOESNTEXISTYET.herokuapp.com/
+[POST] "/api/auth/register" - creates user, returns user data for new account (user_id, username, password, email), and login token
+[POST] "/api/auth/login" - logs in user, returns user data for logged in account (user_id, username, password, permissions)
+[GET] "/api/users/" - returns all user data (user_id, username, password, permissions)
+
+
+
+
+----------------------------------- BuildWeek Help Info -----------------------------------
 # Build Week Scaffolding
 
 First READ these instructions to get an overview of what's involved in scaffolding an Express + PostgreSQL app that deploys to Heroku.
