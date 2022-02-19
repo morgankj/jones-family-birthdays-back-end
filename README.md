@@ -11,17 +11,17 @@ There are 3 tables that manage app data, organized like so:
 
 Endpoints:
 [BackEnd Base URL] https://DOESNTEXISTYET.herokuapp.com/
-[POST] "/api/auth/register" - creates user, returns user data for new account (user_id, username, password, email), and login token
-[POST] "/api/auth/login" - logs in user, returns user data for logged in account (user_id, username, password, permissions)
-[GET] "/api/users/" - returns all user data (user_id, username, password, permissions)
+- [POST] "/api/auth/register" - creates user, returns user data for new account (user_id, username, password, email), and login token
+- [POST] "/api/auth/login" - logs in user, returns user data for logged in account (user_id, username, password, permissions)
+- [GET] "/api/users/" - returns all user data (user_id, username, password, permissions)
 
-[GET] "/api/ " - returns data on one nuclear family
-[GET] "/api/ " - returns data on one person
-[GET] "/api/ " - returns data on everyone
+- [GET] "/api/ " - returns data on one nuclear family
+- [GET] "/api/ " - returns data on one person
+- [GET] "/api/ " - returns data on everyone
 
-[PUT] "/api/ " - update user info and return updated info
-[POST] "/api/ " - add new person
-[PUT] "/api/ " - update person
+- [PUT] "/api/ " - update user info and return updated info
+- [POST] "/api/ " - add new person
+- [PUT] "/api/ " - update person
 
 
 ----------------------------------- BuildWeek Help Info -----------------------------------
