@@ -15,13 +15,13 @@ Endpoints:
 - [POST] "/api/auth/login" - logs in user, returns user data for logged in account (user_id, username, password, permissions)
 - [GET] "/api/users/" - returns all user data (user_id, username, password, permissions)
 
-- [GET] "/api/ " - returns data on one nuclear family
-- [GET] "/api/ " - returns data on one person
-- [GET] "/api/ " - returns data on everyone
+- [GET] "/api/people " - returns data on everyone
+- [GET] "/api/people/:person_id " - returns data on one person
+- [GET] "/api/family/:family_id " - returns data on one nuclear family
 
-- [PUT] "/api/ " - update user info and return updated info
-- [POST] "/api/ " - add new person
-- [PUT] "/api/ " - update person
+- [PUT] "/api/users/:user_id " - update user info and return updated info
+- [POST] "/api/people " - add new person
+- [PUT] "/api/people/:person_id " - update person
 
 
 ----------------------------------- BuildWeek Help Info -----------------------------------
