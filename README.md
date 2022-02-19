@@ -14,8 +14,8 @@ Endpoints:
 - [POST] "/api/auth/register" - creates user, returns user data for new account (user_id, username, password, email), and login token
 - [POST] "/api/auth/login" - logs in user, returns user data for logged in account (user_id, username, password, permissions)
 - [GET] "/api/users/" - returns all user data (user_id, username, password, permissions)
-
 - [GET] "/api/people " - returns data on everyone
+
 - [GET] "/api/people/:person_id " - returns data on one person
 - [GET] "/api/family/:family_id " - returns data on one nuclear family
 

@@ -9,8 +9,10 @@ server.use(cors());
 
 const authRouter = require("./auth/auth-router");
 const usersRouter = require("./users/users-router");
+const peopleRouter = require("./people/people-router");
 server.use("/api/auth", authRouter);
 server.use("/api/users", usersRouter);
+server.use("/api/people", peopleRouter);
 
 server.use((err, req, res, next) => {
   res.status(err.status || 500).json({
