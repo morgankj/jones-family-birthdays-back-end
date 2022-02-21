@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const People = require("./people-model");
+const { checkNuclearName } = require("./people-middleware");
 
 router.get("/", (req, res, next) => {
   People.findAllPeople()
@@ -13,6 +14,21 @@ router.get("/:person_id", (req, res, next) => {
   People.findPersonById(req.params.person_id)
     .then((person) => {
       res.status(200).json(person);
+    })
+    .catch(next);
+});
+
+router.post("/", checkNuclearName, (req, res, next) => {
+  const newPerson = {
+    person_name: req.body.person_name,
+    person_birthday: req.body.person_birthday,
+    person_image: req.body.person_image,
+    person_spouse_id: req.body.person_spouse_id,
+    nuclear_id: req.body.nuclear_id,
+  };
+  People.addPerson(newPerson)
+    .then((person) => {
+      res.status(201).json(person);
     })
     .catch(next);
 });
