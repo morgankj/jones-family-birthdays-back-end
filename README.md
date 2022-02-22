@@ -22,6 +22,7 @@ Endpoints:
 - [PUT] "/api/people/:person_id " - update person
 - [GET] "/api/family/:family_id " - returns data on one nuclear family
 - [PUT] "/api/users/:user_id " - update user info and return updated info
+- [GET] endpoint to see all nuclear names
 
 
 ----------------------------------- BuildWeek Help Info -----------------------------------
