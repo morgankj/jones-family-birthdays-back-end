@@ -13,7 +13,6 @@ const checkNuclearName = async (req, res, next) => {
       req.body.nuclear_id = newNuclearId;
       next();
     }
-    console.log("NUC ID: ", nuclearExists.nuclear_id);
     req.body.nuclear_id = nuclearExists.nuclear_id;
     next();
   } catch (err) {

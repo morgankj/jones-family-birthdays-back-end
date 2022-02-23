@@ -18,18 +18,6 @@ const addPerson = async (person) => {
     "nuclear_id",
   ]);
   return newPerson;
-  //   await db.transaction(async (trx) => {
-  //     const [addedPerson] = await trx("people").insert(person, [
-  //       "person_id",
-  //       "person_name",
-  //       "person_birthday",
-  //       "person_birthday",
-  //       "person_spouse_id",
-  //       "nuclear_id",
-  //     ]);
-
-  //     return addedPerson;
-  //   });
 };
 
 module.exports = {

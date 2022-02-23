@@ -20,9 +20,12 @@ Endpoints:
 
 - [POST] "/api/people " - add new person
 - [PUT] "/api/people/:person_id " - update person
+- [GET] "/api/family" - returns all nuclear names
 - [GET] "/api/family/:family_id " - returns data on one nuclear family
 - [PUT] "/api/users/:user_id " - update user info and return updated info
-- [GET] endpoint to see all nuclear names
+- [DELETE] - deletes user
+- [DELETE] - deletes person
+- [DELETE] - deletes nuclear
 
 
 ----------------------------------- BuildWeek Help Info -----------------------------------
