@@ -1,3 +1,9 @@
 const db = require("../data/db-config");
 
-module.exports = {};
+const findAllNuclearFamilies = () => {
+  return db("nuclear");
+};
+
+module.exports = {
+  findAllNuclearFamilies,
+};
