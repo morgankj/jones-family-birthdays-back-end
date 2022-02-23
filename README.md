@@ -16,12 +16,12 @@ Endpoints:
 - [GET] "/api/users/" - returns all user data (user_id, username, password, permissions)
 - [GET] "/api/people " - returns data on everyone
 - [GET] "/api/people/:person_id " - returns data on one person
+- [POST] "/api/people " - add new person
 - [GET] "/api/family" - returns all nuclear names
 
 
-- [POST] "/api/people " - add new person
 - [PUT] "/api/people/:person_id " - update person
-- [GET] "/api/family/:family_id " - returns data on one nuclear family
+- [GET] "/api/family/:nuclear_id " - returns data on one nuclear family
 - [PUT] "/api/users/:user_id " - update user info and return updated info
 - [DELETE] - deletes user
 - [DELETE] - deletes person

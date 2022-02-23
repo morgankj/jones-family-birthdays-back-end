@@ -9,4 +9,12 @@ router.get("/", (req, res, next) => {
     .catch(next);
 });
 
+router.get("/:nuclear_id", (req, res, next) => {
+  Families.findNuclearFamilyById(req.params.nuclear_id)
+    .then((family) => {
+      res.status(200).json(family);
+    })
+    .catch(next);
+});
+
 module.exports = router;
