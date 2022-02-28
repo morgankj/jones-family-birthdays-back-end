@@ -20,8 +20,13 @@ const addPerson = async (person) => {
   return newPerson;
 };
 
+const deletePerson = (person_id) => {
+  return db("people").where({ person_id }).del();
+};
+
 module.exports = {
   findAllPeople,
   findPersonById,
   addPerson,
+  deletePerson,
 };

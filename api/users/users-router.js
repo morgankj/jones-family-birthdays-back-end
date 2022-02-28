@@ -9,4 +9,16 @@ router.get("/", (req, res, next) => {
     .catch(next);
 });
 
+router.delete("/:user_id", (req, res, next) => {
+  Users.deleteUser(req.params.user_id)
+    .then((count) => {
+      if (count > 0) {
+        res.status(204).end();
+      } else {
+        res.status(404).json({ message: "Record not found" });
+      }
+    })
+    .catch(next);
+});
+
 module.exports = router;

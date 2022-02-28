@@ -13,13 +13,18 @@ const addUser = async (user) => {
     "user_id",
     "username",
     "password",
-    "email"
+    "email",
   ]);
   return newUser;
+};
+
+const deleteUser = (user_id) => {
+  return db("users").where({ user_id }).del();
 };
 
 module.exports = {
   findAllUsers,
   findByUsername,
-  addUser
+  addUser,
+  deleteUser
 };

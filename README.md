@@ -14,18 +14,18 @@ Endpoints:
 - [POST] "/api/auth/register" - creates user, returns user data for new account (user_id, username, password, email), and login token
 - [POST] "/api/auth/login" - logs in user, returns user data for logged in account (user_id, username, password, permissions)
 - [GET] "/api/users/" - returns all user data (user_id, username, password, permissions)
-- [GET] "/api/people " - returns data on everyone
-- [GET] "/api/people/:person_id " - returns data on one person
-- [POST] "/api/people " - add new person
+- [DELETE] "/api/users/:user_id" - deletes user
+- [GET] "/api/people" - returns data on everyone
+- [GET] "/api/people/:person_id" - returns data on one person
+- [POST] "/api/people" - add new person
+- [DELETE] "/api/people/:person_id" - deletes person
 - [GET] "/api/family" - returns all nuclear names
+- [GET] "/api/family/:nuclear_id" - returns data on one nuclear family
+- [DELETE] "/api/family/:nuclear_id" - deletes nuclear
 
-
-- [PUT] "/api/people/:person_id " - update person
-- [GET] "/api/family/:nuclear_id " - returns data on one nuclear family
-- [PUT] "/api/users/:user_id " - update user info and return updated info
-- [DELETE] - deletes user
-- [DELETE] - deletes person
-- [DELETE] - deletes nuclear
+- [PUT] "/api/people/:person_id" - update person and return updated info
+- [PUT] "/api/users/:user_id" - update user info and return updated info
+- [PUT] "/api/family/::nuclear_id" - update nuclear family info and return updated info
 
 
 ----------------------------------- BuildWeek Help Info -----------------------------------
