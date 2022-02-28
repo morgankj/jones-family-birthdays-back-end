@@ -1,3 +1,4 @@
+const res = require("express/lib/response");
 const db = require("../data/db-config");
 
 const findAllPeople = () => {
@@ -20,6 +21,14 @@ const addPerson = async (person) => {
   return newPerson;
 };
 
+const updatePerson = async (updates) => {
+  let personUpdates = {};
+
+  await db("people").where("person_id", updates.person_id).update(updates);
+  
+  return findPersonById(updates.person_id);
+};
+
 const deletePerson = (person_id) => {
   return db("people").where({ person_id }).del();
 };
@@ -28,5 +37,6 @@ module.exports = {
   findAllPeople,
   findPersonById,
   addPerson,
+  updatePerson,
   deletePerson,
 };

@@ -19,11 +19,11 @@ Endpoints:
 - [GET] "/api/people/:person_id" - returns data on one person
 - [POST] "/api/people" - add new person
 - [DELETE] "/api/people/:person_id" - deletes person
+- [PUT] "/api/people/:person_id" - update person and return updated info
 - [GET] "/api/family" - returns all nuclear names
 - [GET] "/api/family/:nuclear_id" - returns data on one nuclear family
 - [DELETE] "/api/family/:nuclear_id" - deletes nuclear
 
-- [PUT] "/api/people/:person_id" - update person and return updated info
 - [PUT] "/api/users/:user_id" - update user info and return updated info
 - [PUT] "/api/family/::nuclear_id" - update nuclear family info and return updated info
 

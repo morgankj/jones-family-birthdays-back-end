@@ -34,6 +34,15 @@ router.post("/", checkNuclearName, (req, res, next) => {
     .catch(next);
 });
 
+router.put("/:person_id", (req, res, next) => {
+  req.body.person_id = req.params.person_id;
+  People.updatePerson(req.body)
+    .then(person => {
+      res.status(200).json(person);
+    })
+    .catch(next);
+});
+
 router.delete("/:person_id", (req, res, next) => {
   People.deletePerson(req.params.person_id)
     .then((count) => {
