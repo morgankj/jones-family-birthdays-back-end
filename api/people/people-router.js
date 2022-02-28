@@ -26,6 +26,7 @@ router.post("/", checkNuclearName, (req, res, next) => {
     person_spouse_id: req.body.person_spouse_id,
     nuclear_id: req.body.nuclear_id,
   };
+
   People.addPerson(newPerson)
     .then((person) => {
       res.status(201).json(person);

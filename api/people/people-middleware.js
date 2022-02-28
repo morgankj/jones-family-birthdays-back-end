@@ -7,14 +7,26 @@ const checkNuclearName = async (req, res, next) => {
       .first();
 
     if (!nuclearExists) {
-      const [newNuclearId] = await db("nuclear").insert({
-        nuclear_name: req.body.nuclear_name,
-      });
-      req.body.nuclear_id = newNuclearId;
+      let newNuclearId;
+      try {
+        [newNuclearId] = await db("nuclear").insert(
+          {
+            nuclear_name: req.body.nuclear_name,
+          },
+          ["nuclear_id"]
+        );
+      } catch (err) {
+        next(err);
+      }
+
+      req.body.nuclear_id = newNuclearId.nuclear_id;
       next();
+
+    } else {
+      req.body.nuclear_id = nuclearExists.nuclear_id;
+      next();
+      
     }
-    req.body.nuclear_id = nuclearExists.nuclear_id;
-    next();
   } catch (err) {
     next(err);
   }
