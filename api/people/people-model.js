@@ -1,4 +1,3 @@
-const res = require("express/lib/response");
 const db = require("../data/db-config");
 
 const findAllPeople = () => {
@@ -18,14 +17,13 @@ const addPerson = async (person) => {
     "person_spouse_id",
     "nuclear_id",
   ]);
+  
   return newPerson;
 };
 
 const updatePerson = async (updates) => {
-  let personUpdates = {};
-
   await db("people").where("person_id", updates.person_id).update(updates);
-  
+
   return findPersonById(updates.person_id);
 };
 

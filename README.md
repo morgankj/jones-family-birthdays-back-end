@@ -10,7 +10,7 @@ There are 3 tables that manage app data, organized like so:
   - person_id, person_name, person_birthday, person_image, person_spouse_id(), nuclear_id(FK)
 
 Endpoints:
-[BackEnd Base URL] https://DOESNTEXISTYET.herokuapp.com/
+[BackEnd Base URL] https://DOESNTEXISTYET.herokuapp.com/  (http://localhost:9000/)
 - [POST] "/api/auth/register" - creates user, returns user data for new account (user_id, username, password, email), and login token
 - [POST] "/api/auth/login" - logs in user, returns user data for logged in account (user_id, username, password, permissions)
 - [GET] "/api/users/" - returns all user data (user_id, username, password, permissions)
